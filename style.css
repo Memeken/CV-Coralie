@@ -1,0 +1,64 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	background-color: cornsilk;
+}
+
+.connection{
+	display: block;
+	margin-left: 50%;
+	margin-right: 50%;
+	margin-top: 40px;
+	width: auto;
+}
+
+h1{
+	display: block;
+	text-align: center;
+	font-family: 'Liu Jian Mao Cao', cursive;
+	font-size: xx-large;
+}
+
+nav{
+	margin: 0 auto;
+	width: 100%;
+	position: sticky;
+	top: 0px;
+}
+
+nav ul.menu{
+	list-style-type: none;
+}
+
+nav li.listeMenu{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+nav ul.menu::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav a{
+	display: block;
+	text-decoration: none;
+	background: linear-gradient(teal, silver);
+	color: gainsboro;
+}
+
+nav a:hover{
+	background: burlywood;
+}
+
+li.emplois{
+	list-style-type: disc;
+}
+
+p{
+	font-family: 'Cookie', cursive;
+	font-size: x-large;
+}
+
