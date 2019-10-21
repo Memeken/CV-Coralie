@@ -3,34 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+	<title>Page d'accueil</title>
 </head>
 <body>
-
 	<div class="connection">
-		<form method="post"> <!-- formulaire de connexion-->
-		<p>
-			<input type="password" name="mot de passe" value="entrer mot de passe">
-			<input type="submit" name="bouton" value="valider">
+		<form action="mdp.php" method="post"> <!-- formulaire de connexion sur la page mdp qui va rediriger si le mdp est bon ou pas -->
+		<p>	<!--<input type="password" name="mot de passe" > -->
+			<label for="pass">Password:</label>
+    		<input type="password" name="mot_de_passe">
+			<input type="submit" value="valider">
 		</p>
 		</form>
 	</div>
-		
-	<p>
-		<?php // condition pour se connecter
-	 
-			if($_POST['mot_de_passe']=="Memeken"){
-	    		echo '<p>Vous êtes connecté !</p>';
-	    		include('cvCoco.php');
-			}
-
-			elseif($_POST['mot_de_passe'] !="Memeken"){
-	    		echo '<p>Le mot de passe est incorrect !</p>';
-	    		echo '<img src="giphy.gif" alt="gandalf">';
-			}
-		?>
-	</p>
-	
-
 </body>
 </html>

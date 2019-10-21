@@ -14,41 +14,40 @@
 	<br>
 	<nav>
 		<ul class="menu"> <!-- Menu de navigation -->
-			<li class="listeMenu"><a href="#" style="cursor:pointer;" onClick="gestion_menu('informations');">INFORMATIONS</a></li>
-			<li class="listeMenu"><a href="#" style="cursor:pointer;" onClick="gestion_menu('emplois');">EMPLOIS</a></li>
-			<li class="listeMenu"><a href="#">FORMATIONS</a></li>
-			<li class="listeMenu"><a href="#">DOMAINES & APTITUDES</a></li>
-			<li class="listeMenu"><a href="#">INTERETS</a></li>
+			<li class="listeMenu"><a href="?information">INFORMATIONS</a></li>
+			<li class="listeMenu"><a href="?emplois">EMPLOIS</a></li>
+			<li class="listeMenu"><a href="?formations">FORMATIONS</a></li>
+			<li class="listeMenu"><a href="?domaines">DOMAINES & APTITUDES</a></li>
+			<li class="listeMenu"><a href="?interets">INTERETS</a></li>
 		</ul>
 	</nav>
 
-<div id="informations" style="display:none"> <!-- appel de la fonction pour ouvrir le menu informations-->
-	<?php include('Informations.php') ?>
+<div> <!-- appel de la fonction pour ouvrir le menu informations-->
+	<?php  
+		if (isset($_GET['information'])) {
+			include('Informations.php');
+		}
+		if (isset($_GET['emplois'])) {
+			include('emplois.php');
+		}
+		if (isset($_GET['formations'])) {
+			include('formations.php');
+		}
+		if (isset($_GET['domaines'])) {
+			include('domaines.php');
+		}
+		if (isset($_GET['interets'])) {
+			include('interets.php');
+		} 
+	?>
 </div>
-
-<div id="emplois" style="display:none"> <!-- appel de la fonction pour ouvrir le menu emplois-->
-	<?php include('emplois.php') ?>
-</div>
-
-
-<div id="translator_1810"> <!-- bouton de traduction -->
+<!--<div id="translator_1810"> bouton de traduction 
 	<noscript>Javascript is disable - <a href="http://www.supportduweb.com/">http://www.supportduweb.com/</a> - <a href="http://www.supportduweb.com/generateur-boutons-traduction-translation-google-gratuit-html-code=script-boutons-traduire-page-web.html">Générateur de boutons de traduction</a>
 	</noscript>
-</div>
+</div>-
 
 <script type="text/javascript" src="http://services.supportduweb.com/translator/1810-3-ynnnnnnnn.js"></script> <!-- bouton de traduction javascript-->
 
-<script type="text/javascript">
-
-function gestion_menu(id_box) { // fonction qui appelle le menu sur la même page
-        chemin_box = document.getElementById(id_box);
-        if(chemin_box.style.display == 'none') {
-                chemin_box.style.display = 'block';
-        } else {
-                chemin_box.style.display = 'none';
-        }
-}
-</script>
-
+<!--<script type="text/javascript"> -->
 </body>
 </html>
